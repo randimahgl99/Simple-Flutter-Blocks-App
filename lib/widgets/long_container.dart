@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class SmallContainer extends StatelessWidget {
+class LongContainer extends StatelessWidget {
   final String title;
   final String description;
-  const SmallContainer({super.key, required this.title, required this.description});
+  const LongContainer({super.key, required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-                  width: 180,
+                  width: double.infinity,
                   height: 170,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.purpleAccent,
+                    color: Colors.yellow.shade400,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -22,7 +22,7 @@ class SmallContainer extends StatelessWidget {
                         Text(  
                         title,
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color(0xff3B3636),
                           fontSize: 18,
                           fontWeight: FontWeight.w600
                         ),
@@ -33,9 +33,9 @@ class SmallContainer extends StatelessWidget {
                         Text(
                         description,
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 15,
-                          fontWeight: FontWeight.w600
+                          fontWeight: FontWeight.w500
                         ),
                         ),
                       ],

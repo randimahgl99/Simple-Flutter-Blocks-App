@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project1/widgets/icon_cards.dart';
+import 'package:project1/widgets/long_container.dart';
 import 'package:project1/widgets/small_container.dart';
+import 'package:project1/widgets/social_icon_box.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -32,7 +35,7 @@ class HomePage extends StatelessWidget {
                 ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -49,12 +52,112 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 20.0,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SmallContainer()
+                    SmallContainer(
+                      title: 'Open-source',
+                      description: 'A Flutter Container is a widget used to hold, style, and position other widgets.',
+                    ),
+                    SmallContainer(
+                      title: 'Widget-Tree',
+                      description: 'A Flutter Container is a widget used to hold, style, and position other widgets.',
+                    )
                   ],
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                LongContainer(
+                  title: 'Open-source',
+                  description: 'A Flutter Container is a widget used to hold, style, and position other widgets. It can have padding, margin, color, borders, size, and alignment. Think of it as a box that you can decorate and place anywhere in your layout.',
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                LongContainer(
+                  title: 'Widget-Tree',
+                  description: 'A Flutter Container is a widget used to hold, style, and position other widgets. It can have padding, margin, color, borders, size, and alignment. Think of it as a box that you can decorate and place anywhere in your layout.',
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconCards(
+                    iconBgColor: Colors.red,
+                    iconName: Icons.person_pin_circle,
+                    iconColor: Colors.black,
+                  ),
+                    IconCards(
+                    iconBgColor: Colors.red,
+                    iconName: Icons.alarm,
+                    iconColor: Colors.white,
+                  ),
+                  ] 
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Divider(
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Flutter Team',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600
+                      ),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text('A Flutter Container is a widget used to hold, style, and position other widgets. It can have padding, margin, color, borders, size, and alignment. Think of it as a box that you can decorate and place anywhere in your layout.',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300
+                      ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SocialIconBox(
+                        socialIcon: Icons.facebook,
+                      ),
+                      SocialIconBox(
+                        socialIcon: Icons.ac_unit,
+                      ),
+                      SocialIconBox(
+                        socialIcon: Icons.cloud_circle,
+                      ),
+                      SocialIconBox(
+                        socialIcon: Icons.lock_clock,
+                      ),
+                      SocialIconBox(
+                        socialIcon: Icons.bakery_dining_outlined,
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
